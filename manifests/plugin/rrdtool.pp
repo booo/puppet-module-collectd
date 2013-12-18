@@ -1,6 +1,9 @@
 # https://collectd.org/wiki/index.php/Plugin:RRDtool
 class collectd::plugin::rrdtool (
-  $ensure    = present
+  $ensure          = present,
+  $datadir         = '/var/lib/collectd/rrd',
+  $cacheflush      = 120,
+  $writespersecond = 50,
 ) {
   include collectd::params
 

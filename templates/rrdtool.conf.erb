@@ -2,7 +2,7 @@
 LoadPlugin rrdtool
 
 <Plugin "rrdtool">
-  DataDir "/var/lib/collectd/rrd"
-  CacheFlush 120
-  WritesPerSecond 50
+  DataDir "<%= @datadir %>"
+  CacheFlush <%= @cacheflush %>
+  WritesPerSecond <%= @writespersecond %>
 </Plugin>
